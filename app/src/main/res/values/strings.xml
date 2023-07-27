@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">АРМ мастера УТП</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">mataomen@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_item_staff">Персонал</string>
+    <string name="tab_item_exting">Огнетушители</string>
+    <string name="tab_item_hardware">Оборуование</string>
+    <string name="tab_item_tool">Электрозащитное средство</string>
+    <string name="tab_item_transformer">Трансформатор</string>
+    <string name="tab_item_lps">Подстанции</string>
+
+    <!--поля ввода Staff-->
+    <string name="hr_name">Имя</string>
+    <string name="hr_surname">Фамилия</string>
+    <string name="hr_patronymic">Отчество</string>
+    <string name="hr_birthday">Дата рождения</string>
+    <string name="hr_timecard">Табельный номер</string>
+    <string name="hr_home_phone">д.т.</string>
+    <string name="hr_mobile_phone1">м.т.1</string>
+    <string name="hr_mobile_phone2">м.т.2</string>
+    <string name="mobile_phone2_text">Моб. тел. 2</string>
+
+    <string name="title_activity_blabla">blabla</string>
+
+    <!--кнопки и поиковое поле-->
+    <string name="button_save">Сохранить</string>
+    <string name="button_delete">Удалить</string>
+    <string name="search">Поиск</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!--Текст из меню-->
+    <string name="drawer_title_main">Главная</string>
+    <string name="work_list">План ремонтных работ</string>
+    <string name="work_list2">План поверок</string>
+    <string name="staff">Персонал</string>
+    <string name="extinguishing">Средства пожаротушения</string>
+    <string name="shift">Рабочие смены</string>
+    <string name="tools">Электро защитные средства</string>
+    <string name="transformers">Трансформаторы</string>
+    <string name="hardware">Оборудование</string>
+    <string name="shift_text">Рабочая смена</string>
+    <string name="lpses">Подстанции</string>
+    <string name="extinguisher">Огнетушитель: </string>
+    <string name="stock_nomber">Инв. №: </string>
+    <string name="verification">Дата поверки:  </string>
+    <string name="next_verification">Сл. дата поверки:  </string>
+    <string name="title_activity_works">Список работ</string>
+    <string name="work_archive">Журнал ремонтных работ</string>
+    <string name="lps_list">Список подстанций КУП «Горэлектротранспорт»</string>
+
+    <!-- -->
+    <string name="naming">Наимеование: </string>
+    <!-- MAIN -->
+    <string name="main_title">Автоматизация работы мастера участка тяговых подстанций\nКУП «Горэлектротранспорт»</string>
+    <string name="main_functions">Основные функции программы:</string>
+    <string name="first_function">хранение, удаление и обновление данных участка об оборудовании, трансформаторах, электрозащитных средствах, средствах пожаротушения и персонале</string>
+    <string name="second_function">возможность динамического поиска данных в БД</string>
+    <string name="third_function">фильтр полученных данных</string>
+    <string name="fourth_function">обеспечение интерфейса, объединяющего различные группы данных</string>
+    <string name="fifth_function">обеспечение интерфейса, объединяющего различные группы данных</string>
+    <string name="sixth_function">формирование отчетной документации</string>
+    <string name="author">Приложение разарботал Студент группы ЗИТ-61 Кокотов А.С.</string>
+
+
+</resources>

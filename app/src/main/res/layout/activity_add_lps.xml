@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.LPS"/>
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/lps_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Подстанция"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <!--наименование подстанции -->
+        <TextView
+            android:id="@+id/lps_add_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Наименование"
+            android:layout_below="@+id/lps_add_title"/>
+
+        <EditText
+            android:id="@+id/lps_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lps_add_title"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/lps_add_name_text"
+            android:text="@{item.name}"/>
+
+        <!-- адрес  -->
+        <TextView
+            android:id="@+id/lps_add_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lps_add_name"
+            android:layout_marginTop="20dp"
+            android:text="Адрес: " />
+
+        <EditText
+            android:id="@+id/lps_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lps_add_name"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/lps_add_address_text"
+            android:text="@{item.address}"/>
+
+        <!-- инвентарный номер -->
+        <TextView
+            android:id="@+id/lps_add_stock_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lps_add_address"
+            android:layout_marginTop="20dp"
+            android:text="@string/stock_nomber" />
+
+        <EditText
+            android:id="@+id/lps_add_stock_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lps_add_address"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/lps_add_address_text"
+            android:text="@{item.stockNumber}"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="delete"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

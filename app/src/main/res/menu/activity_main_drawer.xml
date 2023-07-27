@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/icon_main"
+            android:title="@string/drawer_title_main" />
+        <item
+            android:id="@+id/nav_plans"
+            android:icon="@drawable/icon_works"
+            android:title="@string/work_list" />
+        <item
+            android:id="@+id/nav_archive"
+            android:icon="@drawable/icon_archive"
+            android:title="@string/work_archive" />
+        <item
+            android:id="@+id/nav_plans2"
+            android:icon="@drawable/icon_works"
+            android:title="@string/work_list2" />
+        <item
+            android:id="@+id/nav_staff"
+            android:icon="@drawable/icon_staff"
+            android:title="@string/staff" />
+        <item
+            android:id="@+id/nav_extinguishing"
+            android:icon="@drawable/icon_extinguishing"
+            android:title="@string/extinguishing" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/icon_tools"
+            android:title="@string/tools" />
+        <item
+            android:id="@+id/nav_transformers"
+            android:icon="@drawable/icon_transformers"
+            android:title="@string/transformers" />
+        <item
+            android:id="@+id/nav_hardware"
+            android:icon="@drawable/icon_hardware"
+            android:title="@string/hardware" />
+        <item
+            android:id="@+id/nav_lps"
+            android:icon="@drawable/icon_lps"
+            android:title="@string/lpses" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+        </menu>
+    </item>
+
+</menu>

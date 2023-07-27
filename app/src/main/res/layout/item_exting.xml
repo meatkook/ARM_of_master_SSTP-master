@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Extinguisher" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/extinguisher_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/extinguisher"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ex_extinguisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/extinguisher_text"
+            android:textColor="@color/dark_gray"
+            android:text="@{item.name}"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ex_stock_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_extinguisher"
+            android:layout_marginLeft="20dp"
+            android:text="@string/stock_nomber"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hardware_plan_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_extinguisher"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ex_stock_number_text"
+            android:textColor="@color/dark_gray"
+            android:text="@{item.number}"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/ex_verification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_plan_date"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/verification"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ex_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_plan_date"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/ex_verification_text"
+            android:textColor="@color/dark_gray"
+            android:text="@{item.verification}"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/ex_next_verification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_verification"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/next_verification"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ex_next_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_verification"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/ex_next_verification_text"
+            android:textColor="@color/dark_gray"
+            android:text="@{item.nextVerification}"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/hardware_plan_lps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/round_green"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@{item.lps.name}"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/ex_next_verification"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+</layout>

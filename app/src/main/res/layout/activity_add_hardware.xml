@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Hardware" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/hardware_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Оборудование"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <!--наименование оборудования -->
+        <TextView
+            android:id="@+id/hardware_add_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_add_title"
+            android:layout_marginTop="20dp"
+            android:text="Наименование" />
+
+        <EditText
+            android:id="@+id/hardware_add_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_add_title"
+            android:layout_toRightOf="@+id/hardware_add_name_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@{item.name}"/>
+
+        <!--плановая дата ремонта-->
+        <TextView
+            android:id="@+id/hardware_add_maintenance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_add_add_name"
+            android:layout_marginTop="20dp"
+            android:text="Пл-я дата ремонта" />
+
+        <TextView
+            android:id="@+id/hardware_add_maintenance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/hardware_add_maintenance_text"
+            android:layout_toRightOf="@+id/hardware_add_maintenance_text"
+            android:text="&gt;Выбрать дату&lt;"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <!--место установки-->
+        <TextView
+            android:id="@+id/hardware_add_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_add_maintenance"
+            android:layout_marginTop="20dp"
+            android:text="Установлен на: " />
+
+        <Spinner
+            android:id="@+id/hardware_add_lps_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardware_add_maintenance"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/hardware_add_text"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButtonHW"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteButtonHW"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="delete"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

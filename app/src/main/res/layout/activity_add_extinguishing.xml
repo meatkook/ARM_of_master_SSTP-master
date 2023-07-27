@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Extinguisher" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/staff_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Средство пожаротушения"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <!--наименование противопожарного средства-->
+        <TextView
+            android:id="@+id/ex_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/staff_title"
+            android:layout_marginTop="20dp"
+            android:text="Наименование" />
+
+        <EditText
+            android:id="@+id/ex_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/staff_title"
+            android:layout_toRightOf="@+id/ex_name_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@{item.name}"/>
+
+        <!--инвентарный номер-->
+        <TextView
+            android:id="@+id/ex_stock_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_name"
+            android:layout_marginTop="20dp"
+            android:text="@string/stock_nomber" />
+
+        <EditText
+            android:id="@+id/ex_add_stock_nomber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_name"
+            android:layout_toRightOf="@+id/ex_stock_number_text"
+            android:textAlignment="center"
+            android:text="@{item.number}"
+            android:textColor="@color/black" />
+
+        <!--дата поверки-->
+        <TextView
+            android:id="@+id/ex_verification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_stock_nomber"
+            android:layout_marginTop="20dp"
+            android:text="Дата поверки: " />
+
+        <EditText
+            android:id="@+id/ex_add_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_stock_nomber"
+            android:layout_toRightOf="@+id/ex_verification_text"
+            android:textAlignment="center"
+            android:text="@{item.verification}"
+            android:textColor="@color/black" />
+
+        <!--следующая дата поверки-->
+        <TextView
+            android:id="@+id/ex_nverification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_verification"
+            android:layout_marginTop="20dp"
+            android:text="Сл. дата поверки: " />
+
+        <EditText
+            android:id="@+id/ex_add_nverification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_verification"
+            android:layout_toRightOf="@+id/ex_nverification_text"
+            android:textAlignment="center"
+            android:text="@{item.nextVerification}"
+            android:textColor="@color/black" />
+
+        <!--следующая дата поверки-->
+        <TextView
+            android:id="@+id/ex_lps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_nverification"
+            android:layout_marginTop="20dp"
+            android:text="Установлен на: " />
+
+        <Spinner
+            android:id="@+id/ex_add_lps_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ex_add_nverification"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/ex_lps_text"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

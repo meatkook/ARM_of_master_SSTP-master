@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="history"
+            type="com.matao.arm.arm_of_master_sstp.models.HardwareHistory" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/history_hardware_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Оборудование: "
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/history_hardware_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/history_hardware_name_text"
+            android:text="@{history.hardware.name}"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/history_hardware_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_hardware_name"
+            android:layout_marginLeft="20dp"
+            android:text="Дата ремонта: "
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/history_hardware_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_hardware_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/history_hardware_date_text"
+            android:text="@{history.dateMaintest}"
+            android:textColor="@color/dark_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/history_hardware_responsible_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_hardware_date"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Производитель: "
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/history_hardware_responsible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_hardware_date"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/history_hardware_responsible_text"
+            android:text="@{history.staff.surname ?? ``}"
+            android:textColor="@color/dark_gray"
+            android:textSize="14dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/history_hardware_responsible"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:id="@+id/history_hardware_lps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/round_green"
+            android:text="@{history.hardware.lps.name}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</layout>

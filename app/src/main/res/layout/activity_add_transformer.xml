@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Transformer"/>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/transformer_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Трансформатор"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <!--наименование трансформаора -->
+        <TextView
+            android:id="@+id/transformer_add_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Наименование"
+            android:layout_below="@+id/transformer_add_title"/>
+
+        <EditText
+            android:id="@+id/transformer_add_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_title"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/transformer_add_name_text"/>
+
+        <!--тип трансформаора -->
+        <TextView
+            android:id="@+id/transformer_add_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_add_name"
+            android:layout_marginTop="20dp"
+            android:text="Тип: " />
+
+        <Spinner
+            android:id="@+id/transformer_add_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/transformer_add_add_name"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/transformer_add_type_text"/>
+
+        <!-- коэффициент трансформации -->
+        <TextView
+            android:id="@+id/transformer_ratio_add__text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="К.Т.: "
+            android:layout_below="@+id/transformer_add_type"/>
+
+        <EditText
+            android:id="@+id/transformer_ratio_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_type"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/transformer_ratio_add__text"/>
+
+        <!--дата поверки-->
+        <TextView
+            android:id="@+id/transformer_add_verification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_ratio_add"
+            android:layout_marginTop="20dp"
+            android:text="Дата поверки: " />
+
+        <TextView
+            android:id="@+id/transformer_add_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_ratio_add"
+            android:layout_toRightOf="@+id/transformer_add_verification_text"
+            android:layout_marginTop="20dp"
+            android:text="&gt;Выбрать дату&lt;"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+
+        <!-- инвентарный номер -->
+        <TextView
+            android:id="@+id/transformer_add_stock_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_verification"
+            android:layout_marginTop="25dp"
+            android:text="@string/stock_nomber" />
+
+        <EditText
+            android:id="@+id/transformer_add_stock_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@+id/transformer_add_verification"
+            android:layout_toRightOf="@+id/transformer_add_stock_number_text"/>
+
+        <!--место установки-->
+        <TextView
+            android:id="@+id/transformer_add_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_stock_number"
+            android:layout_marginTop="20dp"
+            android:text="Установлен на: " />
+
+        <Spinner
+            android:id="@+id/transformer_add_lps_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/transformer_add_stock_number"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/transformer_add_text"/>
+
+        <!-- Месторасположение -->
+        <TextView
+            android:id="@+id/transformer_add_placement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transformer_add_lps_name"
+            android:layout_marginTop="20dp"
+            android:text="Расположение: " />
+        <EditText
+            android:id="@+id/transformer_add_placement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@+id/transformer_add_lps_name"
+            android:layout_toRightOf="@+id/transformer_add_placement_text"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveTransformerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteTransformerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="delete"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

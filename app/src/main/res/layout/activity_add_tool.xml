@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Tool"/>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tool_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Электрозащитное средство"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <!--наименование электрозащитного средства -->
+        <TextView
+            android:id="@+id/tool_add_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Наименование"
+            android:layout_below="@+id/tool_add_title"/>
+
+        <EditText
+            android:id="@+id/tool_add_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_title"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/tool_add_name_text"
+            android:text="@{item.name}"/>
+
+        <!-- инвентарный номер  -->
+        <TextView
+            android:id="@+id/tool_add_stock_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_add_name"
+            android:layout_marginTop="20dp"
+            android:text="Инв №: " />
+
+        <EditText
+            android:id="@+id/tool_add_stock_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_add_name"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_toRightOf="@+id/tool_add_stock_number_text"
+            android:text="@{item.number}"/>
+
+        <!--дата поверки-->
+        <TextView
+            android:id="@+id/tool_add_verification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_stock_number"
+            android:layout_marginTop="20dp"
+            android:text="Дата поверки: " />
+
+        <TextView
+            android:id="@+id/tool_add_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_stock_number"
+            android:layout_toRightOf="@+id/tool_add_verification_text"
+            android:layout_marginTop="20dp"
+            android:text="&gt;Выбрать дату&lt;"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <!--место установки-->
+        <TextView
+            android:id="@+id/tool_add_lps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_add_verification"
+            android:layout_marginTop="20dp"
+            android:text="Установлен на: " />
+
+        <Spinner
+            android:id="@+id/tool_add_lps_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tool_add_verification"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/tool_add_lps_text"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveToolButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteToolButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="delete"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

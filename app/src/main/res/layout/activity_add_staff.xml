@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.matao.arm.arm_of_master_sstp.models.Staff" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/staff_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Данные сотрудника"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/staff_title"
+            android:layout_marginTop="20dp"
+            android:text="@string/hr_name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/staff_title"
+            android:layout_toRightOf="@+id/name_text"
+            android:text="@{item.name}"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/surname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_text"
+            android:layout_marginTop="25dp"
+            android:text="@string/hr_surname" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:text="@{item.surname}"
+            android:layout_toRightOf="@+id/surname_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/patronymic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surname_text"
+            android:layout_marginTop="25dp"
+            android:text="@string/hr_patronymic" />
+
+        <EditText
+            android:id="@+id/patronymic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surname"
+            android:text="@{item.patronymic}"
+            android:layout_toRightOf="@+id/patronymic_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/birthday_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patronymic_text"
+            android:layout_marginTop="27dp"
+            android:text="@string/hr_birthday" />
+
+        <EditText
+            android:id="@+id/birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patronymic"
+            android:text="@{item.birthday}"
+            android:layout_toRightOf="@+id/birthday_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/timecard_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthday_text"
+            android:layout_marginTop="28dp"
+            android:text="Таб. №" />
+
+        <EditText
+            android:id="@+id/timecard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthday"
+            android:text="@{item.timecard}"
+            android:layout_toRightOf="@+id/timecard_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/home_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timecard_text"
+            android:layout_marginTop="27dp"
+            android:text="Дом. тел." />
+
+        <EditText
+            android:id="@+id/home_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timecard"
+            android:text="@{item.homePhone}"
+            android:layout_toRightOf="@+id/home_phone_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/mobile_phone1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_phone_text"
+            android:layout_marginTop="25dp"
+            android:text="Моб. тел. 1" />
+
+        <EditText
+            android:id="@+id/mobile_phone1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_phone"
+            android:text="@{item.mobilePhoneOne}"
+            android:layout_toRightOf="@+id/mobile_phone1_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/mobile_phone2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobile_phone1_text"
+            android:layout_marginTop="27dp"
+            android:text="@string/mobile_phone2_text" />
+
+        <EditText
+            android:id="@+id/mobile_phone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobile_phone1"
+            android:text="@{item.mobilePhoneTwo}"
+            android:layout_toRightOf="@+id/mobile_phone2_text"
+            android:textAlignment="center" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="delete"
+                android:text="@string/button_delete" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
